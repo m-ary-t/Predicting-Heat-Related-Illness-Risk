@@ -2,86 +2,96 @@
 
 ![Heat-Related Illness Dashboard](images/dashboard_overview.png)
 
-*Interactive public health analytics dashboard for forecasting heat-related illness risk across heat-prone U.S. regions.*
+*Interactive machine learning and public health analytics dashboard for forecasting heat-related illness (HRI) risk across heat-prone U.S. regions.*
 
 ---
 
-## Live Dashboard
+# Live Dashboard
 
 https://predictinghri.streamlit.app/
 
 ---
 
-## Project Overview
+# Project Overview
 
-This project develops predictive machine learning models to estimate weekly heat-related illness (HRI) risk across heat-prone U.S. regions using weather, socioeconomic, and public health indicators.
+This project develops predictive machine learning models to estimate weekly heat-related illness (HRI) risk across heat-prone U.S. regions using environmental, socioeconomic, and public health indicators.
 
-The analysis integrates CDC, NOAA, ACS, and HUD datasets to identify relationships between environmental conditions, community vulnerability, and heat-related healthcare demand. Multiple statistical and machine learning models were evaluated to improve forecasting accuracy, interpretability, and public health applicability.
+The analysis integrates:
+- CDC Heat & Health Tracker data
+- NOAA weather data
+- American Community Survey (ACS) socioeconomic indicators
+- HUD homelessness statistics
 
-An interactive Streamlit dashboard was developed to visualize model outputs, regional trends, and healthcare risk indicators.
+Multiple statistical and machine learning models were evaluated to improve:
+- forecasting accuracy
+- model interpretability
+- healthcare applicability
+- public health decision support
+
+An interactive Streamlit dashboard was developed to visualize predictions, model performance, and regional healthcare risk patterns.
 
 ---
 
-## Business Problem
+# Business Problem
 
-Extreme heat events increasingly impact emergency healthcare systems and vulnerable populations across the United States.
+Extreme heat events increasingly strain healthcare systems and disproportionately impact vulnerable populations.
 
 Public health agencies and healthcare systems often face challenges in:
 - anticipating surges in heat-related illness
 - identifying high-risk communities
 - allocating healthcare resources proactively
-- monitoring environmental and socioeconomic vulnerability factors
+- understanding environmental and socioeconomic vulnerability patterns
 
-This project addresses these challenges by building a data-driven forecasting framework capable of estimating heat-related illness risk using weather, socioeconomic, and public health indicators.
+This project addresses these challenges by building a predictive analytics framework capable of forecasting weekly HRI risk using multi-source public health data.
 
 ---
 
-## Objectives
+# Objectives
 
-The goals of this project were to:
+The primary goals of this project were to:
 
-- Predict weekly heat-related illness risk across high-risk U.S. regions
-- Identify key environmental and socioeconomic drivers of heat-related illness
-- Compare statistical and machine learning forecasting approaches
-- Improve predictive performance through feature engineering and model tuning
+- Forecast weekly heat-related illness risk
+- Identify key drivers of heat-related healthcare demand
+- Compare statistical and machine learning modeling approaches
+- Improve predictive performance through feature engineering and tuning
 - Apply explainable AI techniques for healthcare interpretability
 - Develop an interactive public health analytics dashboard
 
 ---
 
-## Key Results
+# Key Results
 
-- Developed predictive models using CDC, NOAA, ACS, and HUD public health datasets
-- Improved model RMSE through feature engineering, transformations, and model tuning
-- Identified major environmental and socioeconomic drivers of heat-related illness risk using SHAP explainability analysis
-- Built an interactive Streamlit dashboard for healthcare forecasting and public health decision support
-- Demonstrated the value of explainable machine learning for healthcare risk forecasting
+- Developed predictive models using integrated healthcare and environmental datasets
+- Improved RMSE through feature engineering and model tuning
+- Identified major drivers of heat-related illness risk using SHAP explainability analysis
+- Built an interactive Streamlit dashboard for healthcare forecasting and public health planning
+- Demonstrated the value of explainable machine learning for healthcare analytics
 
 ---
 
-## Data Sources
+# Data Sources
 
-This project integrates publicly available datasets from multiple healthcare, environmental, and socioeconomic sources.
+This project integrates publicly available datasets from multiple healthcare and environmental sources.
 
-### CDC Heat-Related Illness Data
+## CDC Heat & Health Tracker
 Used for:
-- weekly heat-related illness rates
+- weekly HRI rates
 - regional healthcare impact analysis
 - target prediction variables
 
-### NOAA Weather Data
+## NOAA Climate Data
 Used for:
 - maximum temperature
 - minimum temperature
 - environmental heat exposure indicators
 
-### American Community Survey (ACS)
+## American Community Survey (ACS)
 Used for:
 - socioeconomic indicators
-- poverty and income metrics
+- income and poverty metrics
 - demographic vulnerability measures
 
-### HUD Homelessness Data
+## HUD Homelessness Data
 Used for:
 - overall homelessness estimates
 - unsheltered homelessness indicators
@@ -89,17 +99,9 @@ Used for:
 
 ---
 
-## Repository Data Notice
-
-## Repository Data
+# Repository Data
 
 Processed analytical datasets used for modeling and dashboard development are included within the repository's `/data` directory.
-
-The project integrates publicly available datasets from:
-- CDC Heat & Health Tracker
-- NOAA Climate Data
-- American Community Survey (ACS)
-- HUD Homelessness Data
 
 The repository includes:
 - cleaned analytical datasets
@@ -113,9 +115,9 @@ Some large raw source files used during development may be excluded due to repos
 
 ---
 
-## Methodology
+# Methodology
 
-### Data Pipeline
+## Data Pipeline
 
 ```text
 CDC HRI Data
@@ -137,67 +139,80 @@ Dashboard Visualization
 
 ---
 
-## Feature Engineering
+# Feature Engineering
 
 The project incorporated multiple feature engineering approaches to improve predictive performance and healthcare interpretability.
 
-### Engineered Features Included
-- temperature interaction terms
-- nonlinear transformations
-- socioeconomic vulnerability metrics
-- homelessness indicators
+## Engineered Features Included
+- temperature interaction effects
+- nonlinear temperature transformations
+- socioeconomic vulnerability indicators
+- homelessness-related features
 - transformed environmental variables
-- feature scaling and normalization
+- scaled and normalized predictors
 
-Feature selection and transformation techniques were evaluated to optimize predictive accuracy and reduce model complexity.
+Feature selection and transformation techniques were evaluated to optimize predictive accuracy while reducing unnecessary model complexity.
 
 ---
 
-## Modeling Approaches
+# Modeling Approaches
 
 The following models were developed and evaluated:
 
-### Statistical Models
+## Statistical Models
 - Linear Regression
 
-### Machine Learning Models
+## Machine Learning Models
 - Decision Tree Regressor
 - Random Forest Regressor
 - XGBoost Regressor
 
-### Explainability Methods
+## Explainability Methods
 - SHAP (SHapley Additive Explanations)
 
 ---
 
-## Model Performance
+# Model Performance
 
-### Tuned Model Comparison
+## Tuned RMSE Comparison
+![Tuned RMSE Comparison](images/tuned_model_rmse_comparison.png)
 
-| Model | MAE | RMSE | R² |
-|------|------|------|------|
-| Linear Regression | 98.97 | 149.24 | 0.383 |
-| XGBoost | 96.48 | 152.94 | 0.352 |
-| Decision Tree | 91.79 | 152.94 | 0.352 |
+## RMSE Reduction After Tuning
+![RMSE Reduction](images/rmse_reduction_after_tuning.png)
 
 ### Key Findings
-- Tuned Linear Regression achieved the strongest predictive performance
-- Feature engineering improved forecasting accuracy
+- Tuned Linear Regression achieved the strongest overall predictive performance
+- Feature engineering materially improved forecasting accuracy
 - Nonlinear transformations improved model behavior
 - Socioeconomic vulnerability indicators contributed meaningfully to healthcare risk prediction
 
 ---
 
-## Predictive Performance Visualization
+# Predictive Performance Visualization
 
-### Actual vs Predicted Heat-Related Illness Values
+## Actual vs Predicted HRI Values
 ![Predicted vs Actual](images/predicted_vs_actual.png)
 
 The final tuned linear regression model demonstrated strong alignment between predicted and observed HRI values while capturing broader healthcare risk trends across regions.
 
 ---
 
-## Explainability Analysis
+# Model Tradeoff Analysis
+
+## RMSE vs R² vs MAE Tradeoff
+![Model Tradeoff Analysis](images/model_tradeoff_analysis.png)
+
+The analysis compared models across multiple evaluation metrics to balance:
+- predictive accuracy
+- explainability
+- flexibility
+- healthcare interpretability
+
+While more flexible nonlinear models demonstrated competitive performance, the tuned linear regression model provided the best balance between predictive strength and interpretability.
+
+---
+
+# Explainability Analysis
 
 SHAP explainability analysis was applied to improve transparency and interpretability of the predictive models.
 
@@ -208,10 +223,10 @@ The analysis identified:
 - homelessness-related healthcare risk contributions
 - feature-level model behavior
 
-### SHAP Summary Plot
+## SHAP Summary Plot
 ![SHAP Summary](images/shap_summary.png)
 
-### Major Predictive Drivers
+## Major Predictive Drivers
 - Temperature-income interaction effects
 - Minimum temperature indicators
 - Nonlinear temperature transformations
@@ -220,7 +235,7 @@ The analysis identified:
 
 ---
 
-## Dashboard Features
+# Dashboard Features
 
 The interactive Streamlit dashboard allows users to:
 
@@ -234,14 +249,14 @@ The interactive Streamlit dashboard allows users to:
 
 ---
 
-## Dashboard Preview
+# Dashboard Preview
 
-### Dashboard Overview
+## Dashboard Overview
 ![Dashboard Overview](images/dashboard_overview.png)
 
 ---
 
-## Public Health Impact
+# Public Health Impact
 
 This project demonstrates how predictive analytics and public health data can support healthcare preparedness and environmental health planning.
 
@@ -255,36 +270,38 @@ Potential applications include:
 
 ---
 
-## Technologies Used
+# Technologies Used
 
-### Programming & Analytics
+## Programming & Analytics
 - Python
 - Jupyter Notebook
 
-### Data Analysis & Machine Learning
+## Data Analysis & Machine Learning
 - pandas
 - numpy
 - scikit-learn
 - XGBoost
 
-### Visualization & Dashboarding
+## Visualization & Dashboarding
 - Streamlit
 - Plotly
 - Matplotlib
 - Seaborn
 
-### Explainable AI
+## Explainable AI
 - SHAP
 
 ---
 
-## Repository Structure
+# Repository Structure
 
 ```text
 Predicting-Heat-Related-Illness-Risk/
 
 │── README.md
 │── requirements.txt
+
+├── data/
 
 ├── notebooks/
 │     ├── heat_related_illness_modeling.ipynb
@@ -295,28 +312,30 @@ Predicting-Heat-Related-Illness-Risk/
 
 ├── images/
 │     ├── dashboard_overview.png
-│     ├── tuned_model_performance.png
+│     ├── tuned_model_rmse_comparison.png
+│     ├── rmse_reduction_after_tuning.png
 │     ├── predicted_vs_actual.png
+│     ├── model_tradeoff_analysis.png
 │     ├── shap_summary.png
 ```
 
 ---
 
-## How to Run the Project
+# How to Run the Project
 
-### Clone Repository
+## Clone Repository
 
 ```bash
 git clone https://github.com/m-ary-t/Predicting-Heat-Related-Illness-Risk.git
 ```
 
-### Install Dependencies
+## Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Launch Streamlit Dashboard
+## Launch Streamlit Dashboard
 
 ```bash
 streamlit run streamlit_app/app.py
@@ -324,20 +343,20 @@ streamlit run streamlit_app/app.py
 
 ---
 
-## Future Improvements
+# Future Improvements
 
 Potential future enhancements include:
 
-- Incorporating additional climate and environmental indicators
-- Adding real-time weather integrations
-- Expanding forecasting granularity to state or county levels
-- Integrating emergency department utilization datasets
-- Applying deep learning forecasting approaches
-- Developing real-time heat-health alert systems
+- incorporating additional climate indicators
+- integrating real-time weather data
+- expanding forecasting granularity to county-level predictions
+- integrating emergency department utilization datasets
+- applying deep learning forecasting methods
+- developing real-time heat-health alert systems
 
 ---
 
-## Contributors
+# Contributors
 
 - Mary Tekele
 - Shahzeb Ather
@@ -345,12 +364,10 @@ Potential future enhancements include:
 
 ---
 
-## Acknowledgements
+# Acknowledgements
 
 Data sources and public health resources:
 - CDC Heat & Health Tracker
 - NOAA Climate Data
 - American Community Survey (ACS)
 - HUD Homelessness Data
-
----
