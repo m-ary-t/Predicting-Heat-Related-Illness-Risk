@@ -306,24 +306,30 @@ Potential applications include:
 ```text
 Predicting-Heat-Related-Illness-Risk/
 
-│── README.md
-│── requirements.txt
-
 ├── data/
+│     ├── final_hri_modeling_dataset.csv
+│     ├── synthetic_hri_dataset_fixed.csv
 
-├── notebooks/
-│     ├── heat_related_illness_modeling.ipynb
+├── images/
+│     ├── baseline_vs_tuned_rmse.png
+│     ├── dashboard_overview.png
+│     ├── model_complexity_tradeoffs.png
+│     ├── model_tradeoff_analysis.png
+│     ├── predicted_vs_actual.png
+│     ├── rmse_reduction_after_tuning.png
+│     ├── shap_summary.png
+│     ├── tuned_model_rmse_comparison.png
 
 ├── streamlit_app/
 │     ├── streamlit_app.py
 
-├── images/
-│     ├── dashboard_overview.png
-│     ├── tuned_model_rmse_comparison.png
-│     ├── rmse_reduction_after_tuning.png
-│     ├── predicted_vs_actual.png
-│     ├── model_tradeoff_analysis.png
-│     ├── shap_summary.png
+│── .gitignore
+│── LICENSE
+│── Predicting Heat Related Illness Risk Presentation.pdf
+│── README.md
+│── heat_related_illness_modeling.ipynb
+│── requirements.txt
+
 ```
 
 ---
