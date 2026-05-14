@@ -32,6 +32,21 @@ An interactive Streamlit dashboard was developed to visualize predictions, model
 
 ---
 
+# Skills Demonstrated
+
+- Machine Learning
+- Predictive Modeling
+- Feature Engineering
+- SHAP Explainability
+- Public Health Analytics
+- Time-Series Forecasting
+- Dashboard Development
+- Data Visualization
+- Streamlit Deployment
+- Model Evaluation & Tuning
+
+---
+
 # Business Problem
 
 Extreme heat events increasingly strain healthcare systems and disproportionately impact vulnerable populations.
