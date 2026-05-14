@@ -264,13 +264,6 @@ The interactive Streamlit dashboard allows users to:
 
 ---
 
-# Dashboard Preview
-
-## Dashboard Overview
-![Dashboard Overview](images/dashboard_overview.png)
-
----
-
 # Public Health Impact
 
 This project demonstrates how predictive analytics and public health data can support healthcare preparedness and environmental health planning.
