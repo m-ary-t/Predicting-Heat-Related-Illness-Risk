@@ -12,6 +12,13 @@ https://predictinghri.streamlit.app/
 
 ---
 
+# Presentation Slides
+
+Project presentation:
+[View Presentation Slides](Predicting_Heat_Related_Illness_Risk_Presentation.pdf)
+
+--- 
+
 # Project Overview
 
 This project develops predictive machine learning models to estimate weekly heat-related illness (HRI) risk across heat-prone U.S. regions using environmental, socioeconomic, and public health indicators.
