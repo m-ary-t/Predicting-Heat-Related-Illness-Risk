@@ -313,10 +313,9 @@ Predicting-Heat-Related-Illness-Risk/
 
 ├── notebooks/
 │     ├── heat_related_illness_modeling.ipynb
-│     ├── shap_analysis.ipynb
 
 ├── streamlit_app/
-│     ├── app.py
+│     ├── streamlit_app.py
 
 ├── images/
 │     ├── dashboard_overview.png
